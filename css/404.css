@@ -1,0 +1,133 @@
+*{
+    font-family: 'Raleway';
+    box-sizing: border-box;
+    
+}
+body{
+    margin: 0;
+    line-height: 1.5;
+    background-color: rgb(65, 46, 36);
+}
+#menu{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center ;
+    border-bottom: 2px solid olive;
+}
+#enlaces{
+    padding: 0;
+    display: none;
+    font-size: 10vw;
+}
+#enlaces :not(:last-child){
+    border-bottom: 1px solid olive;
+}
+a{
+    color: rgb(196, 146, 80);
+    text-decoration: none;
+}
+h1,p{
+    text-align: center;
+    margin: auto;
+}
+#logo{
+    max-width: 25%;
+}
+#logo img{
+    max-width: 100%;
+    margin: 0;
+}
+#abrir{
+    color: rgb(196, 146, 80);
+    padding: 0px;
+    margin-right: 4vw;
+    max-width: 15%;
+}
+#cerrar{
+    padding: 0px;
+    margin-right: 4vw;
+    max-width: 15%;
+    display: none;
+}
+#abrir img, #cerrar img{
+    width: 100%;
+}
+ul{
+    list-style-type: none;
+}
+#menu:target #cerrar{
+    display: inline-block;
+}
+#menu:target #abrir{
+    display: none;
+}
+#menu:target #enlaces{
+    display: block;
+    text-align: center;
+    flex-direction: column;
+    margin: 0;
+    border-top: 2px solid olive;
+    width: 100%;
+}
+
+.error{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mensaje{
+    max-width: 100%;
+    font-size: 5vw;
+    color: rgb(196, 146, 80);
+    font-weight: bold;
+}
+.imagen-fluida{
+    max-width: 100%;
+}
+
+
+
+@media only screen and (min-width: 768px){
+    .mensaje{
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    #menu{
+    max-height: 115px;
+    align-content: center;
+    }
+    #logo{
+        width: 115px;
+        height: 115px;
+    }
+    #abrir{
+        display: none;
+    }
+    #enlaces{
+        display: flex;
+        border-bottom: 0px;
+        font-size: 1.6rem;
+    }
+    #enlaces li{
+        padding: 15px;
+    }
+    #enlaces li:not(:last-child){
+        border-right: 2px olive solid;
+        border-bottom: none;
+    }
+    .error{
+        margin-trim: auto;
+    }
+    .mensaje{
+        font-size: 1.8rem;
+    }
+    #gif{
+        width: 300px;
+    }
+}
